@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="37681e21">
+        <description>Created after removal of "Директории" from Doca</description>
+        <accepts>Директории.html</accepts>
+    </rule>
+    <rule id="312d4ded">
+        <description>Created after removal of "Запрос" from Doca</description>
+        <accepts>requestData.html</accepts>
+    </rule>
+    <rule id="8a4aed7">
+        <description>Created after removal of "Связанные таблицы" from DocaCRM</description>
+        <accepts>joins.html</accepts>
+    </rule>
+</rules>

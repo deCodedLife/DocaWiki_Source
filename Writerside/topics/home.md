@@ -1,7 +1,23 @@
-# Концепт
+# Начало работы
 
 ## Архитектура
-Приложение состоит из Ядра (core), системной части (system-app) и бизнесс логики (public-app)
+Приложение состоит из Ядра (core), системной части (system-app) и бизнесс логики (public-app).
+Ядро обрабатывает POST запросы
+
+## Домены
+Для корректной работы api проект должен быть развернут в разных зонах с одинаковым поддоменом и доменом.
+
+### Концепция
+```
+[проект].[система].ru - Админка
+[проект].[система].com - Api
+```
+
+### Пример:
+```
+yazdorov.docacrm.ru
+yazdorov.docacrm.com
+```
 
 ![Create new topic options](new_topic_options.png){ width=290 }{border-effect=line}
 
@@ -12,6 +28,46 @@ You can author content in Markdown and extend it with semantic attributes or inj
 
 ## Inject XML
 For example, this is how you inject a procedure:
+
+<code-block lang="mermaid">
+graph LR
+   A[Do you write docs?]
+   A -- Yes --> B[Use Writerside]
+   A -- No --> C[Tell us why]
+</code-block>
+
+```mermaid
+stateDiagram-v2
+    [*] --> Draft
+    RR: Ready for review
+    NU: Need updates
+    AC: Apply changes
+    LGTM: All good
+    RP: Ready to publish
+    Draft --> RR
+    RR --> Review
+    Review --> NU
+    NU --> AC
+    AC --> Review
+    Review --> LGTM
+    LGTM --> RP
+    RP --> [*]
+```
+
+
+
+```mermaid
+sequenceDiagram
+    Tech writer -->> Developer: Hi, can you check that I've described everything correctly?
+    Developer -->> Junior developer: Hi, can you, please, help our TW with the task?
+    Developer --x Tech writer: Sure, I've asked Garold to take care of this, it will help him to understand the logic better.
+    Junior developer -->> Developer: No problem!
+
+    Developer --> Tech writer: Adding you both to a group chat  ...
+    Note right of Developer: Adding to the chat.
+
+    Tech writer --> Junior developer: Hi, Garold!
+```
 
 <procedure title="Inject a procedure" id="inject-a-procedure">
     <step>
