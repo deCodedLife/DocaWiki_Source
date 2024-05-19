@@ -14,6 +14,7 @@
             <toc-element topic="list_donor.md"/>
             <toc-element topic="joins.md"/>
             <toc-element topic="custom_list.md"/>
+            <toc-element topic="Умные-списки.md"/>
         </toc-element>
         <toc-element topic="commands_schemes.md"/>
         <toc-element topic="lifecycle.md">

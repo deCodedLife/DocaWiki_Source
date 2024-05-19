@@ -54,21 +54,6 @@ stateDiagram-v2
     RP --> [*]
 ```
 
-
-
-```mermaid
-sequenceDiagram
-    Tech writer -->> Developer: Hi, can you check that I've described everything correctly?
-    Developer -->> Junior developer: Hi, can you, please, help our TW with the task?
-    Developer --x Tech writer: Sure, I've asked Garold to take care of this, it will help him to understand the logic better.
-    Junior developer -->> Developer: No problem!
-
-    Developer --> Tech writer: Adding you both to a group chat  ...
-    Note right of Developer: Adding to the chat.
-
-    Tech writer --> Junior developer: Hi, Garold!
-```
-
 <procedure title="Inject a procedure" id="inject-a-procedure">
     <step>
         <p>Start typing and select a procedure type from the completion suggestions:</p>
